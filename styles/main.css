@@ -1,0 +1,199 @@
+body {
+  margin: 0px;
+  background-color: rgba(0, 0, 0, 0.93);
+}
+
+body .toolbox {
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(24, 24, 24, 0.9);
+  z-index: 3;
+}
+
+body .toolbox .active {
+  background-color: #353535;
+}
+
+body .toolbox .group .items {
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+}
+
+body .toolbox .group .items img {
+  width: 100%;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+body .toolbox .group .items:hover {
+  background-color: #353535;
+  cursor: pointer;
+}
+
+body .toolbox .linewidths {
+  border-bottom: 1px solid gray;
+}
+
+body .toolbox .linewidths .items {
+  position: relative;
+}
+
+body .toolbox .linewidths .items .linewidth {
+  position: absolute;
+  background-color: black;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+body .toolbox.left {
+  left: 0px;
+  top: 0px;
+}
+
+body .toolbox.left .group {
+  border-bottom: 1px solid gray;
+}
+
+body .toolbox.right {
+  right: 0px;
+  top: 0px;
+}
+
+body .toolbox.right .group {
+  border-bottom: 1px solid gray;
+}
+
+body .toolbox-bottom {
+  width: 100%;
+  position: absolute;
+  background-color: rgba(24, 24, 24, 0.9);
+  z-index: 2;
+}
+
+body .toolbox-bottom .active {
+  background-color: #353535;
+}
+
+body .toolbox-bottom .colors {
+  margin-left: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .toolbox-bottom .colors .items {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 14px;
+}
+
+body .toolbox-bottom .colors .items:hover {
+  background-color: #353535;
+  cursor: pointer;
+}
+
+body .toolbox-bottom .colors .items .color {
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+body .toolbox-bottom .colors .items .input_color {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  border: 0px solid #ffffff;
+  cursor: pointer;
+}
+
+body .toolbox-bottom.bottom {
+  bottom: 0px;
+  width: 100%;
+}
+
+body .canvas-size {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.93);
+  color: white;
+  padding: 10px;
+}
+
+body .canvas-size label {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+body .canvas-size input {
+  width: 150px;
+  margin: 10px;
+  padding: 5px;
+  display: block;
+}
+
+body .canvas-size button {
+  margin: 20px 10px;
+  display: block;
+}
+
+body .canvas-open {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.93);
+  color: white;
+  padding: 10px;
+}
+
+body .canvas-open button {
+  margin: 20px 10px;
+  display: block;
+}
+
+body .canvas-open input {
+  margin: 20px 10px;
+  display: block;
+}
+
+body #canvas_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 95%;
+  height: 92%;
+  overflow: auto;
+}
+
+body #canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: whitesmoke;
+  z-index: 1;
+}
+
+body #canvas:hover {
+  cursor: crosshair;
+}
+/*# sourceMappingURL=main.css.map */

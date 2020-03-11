@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="daVinci JS Drawing Program">
+    <meta name="keywords" content="daVinci, Drawing, JavaScript">
+    <meta name="author" content="[SYSCOMz] - Borislav Dostumski">
+    <title>daVinci - by [SYSCOMz]</title>
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+    <link rel="icon" href="./images/paint/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/paint/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <div class="toolbox left">
+        <div class="group tools">
+            <div class="items active" data-tool="pencil" title="Pencil Tool">
+                <img src="images/paint/pencil.png" alt="Pencil Tool">
+            </div>
+            <div class="items" data-tool="brush" title="Brush Tool">
+                <img src="images/paint/brush.png" alt="Brush Tool">
+            </div>
+            <div class="items" data-tool="paint-bucket" title="Paint Bucket Tool">
+                <img src="images/paint/bucket.png" alt="Paint Bucket Tool">
+            </div>
+            <div class="items" data-tool="eraser" title="Eraser Tool">
+                <img src="images/paint/eraser.png" alt="Eraser Tool">
+            </div>
+        </div>
+        <div class="group shapes">
+            <div class="items" data-tool="line" title="Line Tool">
+                <img src="images/paint/deg-line.png" alt="Line Tool">
+            </div>
+            <div class="items" data-tool="rectangle" title="Rectangle Tool">
+                <img src="images/paint/rectangular.png" alt="Rectangle Tool">
+            </div>
+            <div class="items" data-tool="circle" title="Circle Tool">
+                <img src="images/paint/circle.png" alt="Circle Tool">
+            </div>
+            <div class="items" data-tool="ellipse" title="Ellipse Tool">
+                <img src="images/paint/ellipse.png" alt="Ellipse Tool">
+            </div>
+            <div class="items" data-tool="triangle" title="Triangle Tool">
+                <img src="images/paint/triangle.png" alt="Triangle Tool">
+            </div>
+        </div>
+        <div class="group linewidths line-width" style="display: block;">
+            <div class="items active" data-line-width="1" title="1 Pixel">
+                <div class="linewidth" style="width: 1px; height: 1px;"></div>
+            </div>
+            <div class="items" data-line-width="2" title="2 Pixel">
+                <div class="linewidth" style="width: 2px; height: 2px;"></div>
+            </div>
+            <div class="items" data-line-width="3" title="3 Pixel">
+                <div class="linewidth" style="width: 3px; height: 3px;"></div>
+            </div>
+            <div class="items" data-line-width="4" title="4 Pixel">
+                <div class="linewidth" style="width: 4px; height: 4px;"></div>
+            </div>
+            <div class="items" data-line-width="5" title="5 Pixel">
+                <div class="linewidth" style="width: 5px; height: 5px;"></div>
+            </div>
+        </div>
+        <div class="group linewidths brush-width" style="display: none;">
+            <div class="items active" data-brush-width="3" title="3 Pixel">
+                <div class="linewidth" style="width: 3px; height: 3px;"></div>
+            </div>
+            <div class="items" data-brush-width="6" title="6 Pixel">
+                <div class="linewidth" style="width: 6px; height: 6px;"></div>
+            </div>
+            <div class="items" data-brush-width="9" title="9 Pixel">
+                <div class="linewidth" style="width: 9px; height: 9px;"></div>
+            </div>
+            <div class="items" data-brush-width="12" title="12 Pixel">
+                <div class="linewidth" style="width: 12px; height: 12px;"></div>
+            </div>
+            <div class="items" data-brush-width="15" title="15 Pixel">
+                <div class="linewidth" style="width: 15px; height: 15px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="canvas_container">
+        <canvas id="canvas" width="980" height="680">Your browser does not support - CANVAS API</canvas>
+    </div>
+
+    <div class="toolbox right">
+        <div class="group commands">
+            <div class="items" data-command="open" title="Open Image">
+                <img src="images/paint/open.png" alt="Openn Image">
+            </div>
+            <div class="items" data-command="size" title="Canvas Size">
+                <img src="images/paint/size.png" alt="Canvas Size">
+            </div>
+            <div class="items" data-command="undo" title="Undo">
+                <img src="images/paint/undo.png" alt="Undo">
+            </div>
+            <div class="items" data-command="save" title="Save">
+                <img src="images/paint/save.png" alt="Save">
+            </div>
+        </div>
+        <div class="group commands shapes-effects" style="display: none;">
+            <div class="items fill-shapes" data-command="fill-shapes" title="Fill Shape Tools">
+                <img src="images/paint/fill.png" alt="Fill Shapes Tool">
+            </div>
+            <div class="items shapes-effects" data-command="effects" title="Shape Tools Effects">
+                <img src="images/paint/effects.png" alt="Effects">
+            </div>
+        </div>
+    </div>
+    
+    <div class="toolbox-bottom bottom">
+        <div class="group colors">
+            <div class="items" data-color="#FF2200" title="Color Picker">
+                <input class="input_color" type="color" value="#FF2200">
+            </div> 
+            <div class="items active" data-color="#000000">
+                <div class="color" style="background-color:#000000;"></div>
+            </div>
+            <div class="items" data-color="#FFFFFF">
+                <div class="color" style="background-color:#FFFFFF;"></div>
+            </div>
+            <div class="items" data-color="#808080">
+                <div class="color" style="background-color:#808080;"></div>
+            </div>
+            <div class="items" data-color="#C0C0C0">
+                <div class="color" style="background-color:#C0C0C0;"></div>
+            </div>
+            <div class="items" data-color="#800000">
+                <div class="color" style="background-color:#800000;"></div>
+            </div>
+            <div class="items" data-color="#FF0000">
+                <div class="color" style="background-color:#FF0000;"></div>
+            </div>
+            <div class="items" data-color="#808000">
+                <div class="color" style="background-color:#808000;"></div>
+            </div>
+            <div class="items" data-color="#FFFF00">
+                <div class="color" style="background-color:#FFFF00;"></div>
+            </div>
+            <div class="items" data-color="#008000">
+                <div class="color" style="background-color:#008000;"></div>
+            </div>
+            <div class="items" data-color="#00FF00">
+                <div class="color" style="background-color:#00FF00;"></div>
+            </div>
+            <div class="items" data-color="#008080">
+                <div class="color" style="background-color:#008080;"></div>
+            </div>
+            <div class="items" data-color="#00FFFF">
+                <div class="color" style="background-color:#00FFFF;"></div>
+            </div>
+            <div class="items" data-color="#000080">
+                <div class="color" style="background-color:#000080;"></div>
+            </div>
+            <div class="items" data-color="#0000FF">
+                <div class="color" style="background-color:#0000FF;"></div>
+            </div> 
+            <div class="items" data-color="#800080">
+                <div class="color" style="background-color:#800080;"></div>
+            </div> 
+            <div class="items" data-color="#FF00FF">
+                <div class="color" style="background-color:#FF00FF;"></div>
+            </div> 
+            <div class="items" data-color="#808040">
+                <div class="color" style="background-color:#808040;"></div>
+            </div> 
+            <div class="items" data-color="#FFFF80">
+                <div class="color" style="background-color:#FFFF80;"></div>
+            </div> 
+            <div class="items" data-color="#004040">
+                <div class="color" style="background-color:#004040;"></div>
+            </div> 
+            <div class="items" data-color="#00FF80">
+                <div class="color" style="background-color:#00FF80;"></div>
+            </div> 
+            <div class="items" data-color="#0080FF">
+                <div class="color" style="background-color:#0080FF;"></div>
+            </div> 
+            <div class="items" data-color="#80FFFF">
+                <div class="color" style="background-color:#80FFFF;"></div>
+            </div> 
+            <div class="items" data-color="#8000FF">
+                <div class="color" style="background-color:#8000FF;"></div>
+            </div> 
+            <div class="items" data-color="#FF0080">
+                <div class="color" style="background-color:#FF0080;"></div>
+            </div> 
+            <div class="items" data-color="#804000">
+                <div class="color" style="background-color:#804000;"></div>
+            </div> 
+            <div class="items" data-color="#FF8040">
+                <div class="color" style="background-color:#FF8040;"></div>
+            </div> 
+
+        </div>
+    </div>
+
+    <div class="canvas-size" style="display: none;">    
+        <label>Width</label>
+        <input type="number" data="canvas-width" placeholder="Canvas Width">
+        <label>Height</label>
+        <input type="number" data="canvas-height" placeholder="Canvas Height">
+        <button type="button" data="resize">Resize</button>
+    </div>
+
+    <div class="canvas-open" style="display: none;">
+        <button type="button" open-data="new-drawing">New Drawing</button>
+        <button type="button" open-data="url-image">(URL) Image</button>
+        <input type="file" open-data="local-image">
+    </div>
+
+    <script type="module" src="./scripts/main.js"></script>
+
+</body>
+</html>
