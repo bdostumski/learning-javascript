@@ -4,7 +4,7 @@ WEB BASED DRAWING PROGRAM
 
 
 <br />
-## **DAVINCI** is a:
+## DAVINCI is a:
 * Web based drawing program
 * GPL (General Public License)
 
@@ -13,14 +13,14 @@ WEB BASED DRAWING PROGRAM
 **To work with the program you need to start it in a web server**
 
 <br />
-## To create **DAVINCI** I am using :
+## To create DAVINCI I am using :
 * HTML
 * SASS
 * JavaScript ES6
 * NGINX Web Server
 
 <br />
-## **Program Design:**
+## Program Design:
 **Program have four main sectors**
 * Left -> Drawing Tools [ Pencil, Brush, Bucket, ... ]
 * Right -> Main Commands [ Open, Save, Resize, Undo, ... ]
