@@ -10,7 +10,7 @@ WEB BASED DRAWING PROGRAM
   <img src="images/wallpaper.png" width="100%" />
 </div>
 
-<a href="https://youtu.be/jfASHPJ5DmU" target="_blank">DAVINCI VIDEO</a>
+<a href="https://youtu.be/jfASHPJ5DmU">DAVINCI VIDEO</a>
 
 ## Requirements
 **To work with the program you need to start it in a web server**
