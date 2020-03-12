@@ -46,8 +46,8 @@ WEB BASED DRAWING PROGRAM
 * **Predefined Colors**
 * **Custom Color**
 
-**Center -> Canvas [ Drawing Feld ]**
-* **Canvas** [ Drawing Feld ]
+**Center -> Canvas [ Drawing Field ]**
+* **Canvas** [ Drawing Field ]
 
 
 
