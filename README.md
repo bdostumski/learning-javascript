@@ -4,7 +4,6 @@ WEB BASED DRAWING PROGRAM
 
 ## **DAVINCI** is a:
 * Web based drawing program
-* GPL (General Public License)
 
 <div align="center">
   <img src="images/wallpaper.png" width="100%" />
@@ -48,10 +47,3 @@ WEB BASED DRAWING PROGRAM
 
 **Center -> Canvas [ Drawing Field ]**
 * **Canvas** [ Drawing Field ]
-
-
-
-
-
-
-
