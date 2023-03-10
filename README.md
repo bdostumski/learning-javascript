@@ -1,27 +1,34 @@
 # DAVINCI by [SYSCOMz]
-WEB BASED DRAWING PROGRAM
---------------
-
-## **DAVINCI** is a:
 * Web based drawing program
+
+## **DAVINCI** online:
+<a href="http://syscomz.com/davinci/">DAVINCI LIVE DEMO</a>
+<br>
+<a href="https://youtu.be/jfASHPJ5DmU">DAVINCI VIDEO DEMO</a>
 
 <div align="center">
   <img src="images/wallpaper.png" width="100%" />
 </div>
 
-<a href="https://youtu.be/jfASHPJ5DmU">DAVINCI VIDEO</a>
-
 ## Requirements
-**To work with the program you need to start it in a web server**
+**To work with the program you need to start it on a web server**
+<br/>
+**<a href="https://hub.docker.com/repository/docker/bdostumski/davinci" target="_blank">[DOCKER]</a> docker run -it -d -p 8080:80 bdostumski/davinci:1.0.0**<br>
+**[Vagrant] vagrant up**
+<br><br>
+**[Kubernetes Orchestration]** <br>
+**minikube start --nodes=2** <br>
+**kubectl apply -f davinci-deployment.yaml** <br>
+**minikube service davinci-service** <br>
 
-## To create **DAVINCI** I am using :
+## To create DAVINCI I was using :
 * HTML
 * SASS
 * JavaScript ES6
 * NGINX Web Server
 
 ## **Program Design:**
-**Program have four main sectors**
+**The program has four main sectors**
 * Left -> Drawing Tools [ Pencil, Brush, Bucket, ... ]
 * Right -> Main Commands [ Open, Save, Resize, Undo, ... ]
 * Bottom -> Colors [ Predefined Colors, Custom Color ]
@@ -35,11 +42,11 @@ WEB BASED DRAWING PROGRAM
 * **Open** [ You can start NEW DRAWING, get image from URL or BROWSE to the image stored in your local computer ]
 * **Save** [ Will save your drawing to the local computer ]
 * **Resize** [ You can resize the Canvas in Width / Height ]
-* **Redu** [ You can redu mistakes to ten ]
+* **Redu** [ You can redo mistakes to ten ]
 * **Fill Shape** [ You can Fill Shapes with different colors for the Line, Rectangle, Circle, Ellipse, Triangle Tools ]
 * **Effects** [ You can add Special Effects for the Line, Rectangle, Circle, Ellipse, Triangle Tools ]
 
-*Images that are get from URL are protected by CORS ‘Access-Control-Allow-Origin’*
+*Images that are got from URL are protected by CORS ‘Access-Control-Allow-Origin’*
 
 **Bottom -> Colors [Predefined Colors, Custom Color]**
 * **Predefined Colors**
