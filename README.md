@@ -2,7 +2,7 @@
 * Web based drawing program
 
 ## **DAVINCI** online:
-<a href="http://syscomz.com/davinci/">DAVINCI LIVE DEMO</a>
+<a href="https://bdostumski.github.io/davinci/">DAVINCI LIVE DEMO</a>
 <br>
 <a href="https://youtu.be/jfASHPJ5DmU">DAVINCI VIDEO DEMO</a>
 
