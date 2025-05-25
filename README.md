@@ -2,7 +2,7 @@
 * Web based drawing program => JavaScript | Docker | Kubernetes | Vagrant | NGINX
 
 ## **DAVINCI** online:
-<a href="https://bdostumski.github.io/davinci/">DAVINCI LIVE DEMO</a>
+<a href="https://bdostumski.github.io/learning-javascript/">DAVINCI LIVE DEMO</a>
 <br>
 <a href="https://youtu.be/jfASHPJ5DmU">DAVINCI VIDEO DEMO</a>
 
