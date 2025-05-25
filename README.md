@@ -1,5 +1,5 @@
 # DAVINCI by [SYSCOMz]
-* Web based drawing program
+* Web based drawing program => JavaScript | Docker | Kubernetes | Vagrant | NGINX
 
 ## **DAVINCI** online:
 <a href="https://bdostumski.github.io/davinci/">DAVINCI LIVE DEMO</a>
